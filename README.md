@@ -1,47 +1,42 @@
 # Audio Spread Analyzer
 
-Aplikasi Android untuk mengukur distribusi suara/suara yang keluar dari speaker atau sound system dengan memanfaatkan mikrofon handphone sebagai sensor penerima.
+Aplikasi Android untuk mengukur distribusi suara dari speaker atau sound system dengan memanfaatkan mikrofon handphone sebagai sensor penerima.
 
 Fitur utama:
 - Pengukuran level suara real-time dari mikrofon handphone
 - Input lokasi/posisi pengukuran
-- Pengukuran level saat ini, rata-rata, maksimal, dan minimal
+- Tampilan level saat ini, rata-rata, maksimum, dan minimum
 - Riwayat pengukuran per titik lokasi
-- Ekspor data pengukuran ke file CSV
+- Ekspor data ke CSV
 - Antarmuka berbasis Jetpack Compose
 
 Catatan penting:
-- Nilai yang ditampilkan adalah level relatif dari mikrofon handphone, bukan hasil kalibrasi SPL profesional.
-- Untuk penggunaan akurasi tinggi, disarankan membandingkan hasil dengan sound level meter referensi.
+- Nilai yang ditampilkan bersifat relatif dari mikrofon handphone, bukan pengukuran SPL yang terkalibrasi sepenuhnya.
+- Hasil bisa berbeda antar perangkat, dan untuk akurasi tinggi disarankan membandingkan dengan sound level meter referensi.
 
 Struktur proyek:
-- `app/src/main/java/com/audiospreadanalyzer/app/ui` : komponen UI aplikasi
-- `app/src/main/java/com/audiospreadanalyzer/app/domain/usecase` : use case pengukuran
-- `app/src/main/java/com/audiospreadanalyzer/app/data` : model dan repository data
-- `app/src/main/java/com/audiospreadanalyzer/app/util` : utilitas audio
+- app/src/main/java/com/audiospreadanalyzer/app/ui : komponen UI aplikasi
+- app/src/main/java/com/audiospreadanalyzer/app/domain/usecase : use case pengukuran
+- app/src/main/java/com/audiospreadanalyzer/app/data : model dan repository data
+- app/src/main/java/com/audiospreadanalyzer/app/util : utilitas audio
 
 Cara menjalankan:
 1. Buka proyek di Android Studio
-2. Pastikan SDK Android tersedia
-3. Hubungkan handphone atau emulator
+2. Pastikan Android SDK terinstall
+3. Sambungkan handphone atau jalankan emulator
 4. Jalankan aplikasi
 5. Berikan izin akses mikrofon
 6. Letakkan handphone di titik pengukuran, lalu mulai pengukuran
 
-Skema pengukuran:
-- Gunakan titik-titik pengukuran yang sudah ditentukan di ruangan
-- Catat posisi seperti depan speaker, kiri speaker, kanan speaker, tengah ruangan, sudut ruangan
-- Bandingkan level suara antar titik untuk memetakan sebaran suara
+Metode pengujian:
+- Tetapkan titik pengukuran di depan speaker, kiri, kanan, tengah, dan sudut ruangan
+- Catat hasil di setiap titik
+- Bandingkan level suara antar titik untuk melihat distribusi audio
 
-Contoh analisis:
-- Lebih tinggi di pusat ruangan = distribusi suara merata
-- Penurunan tajam di sudut = area low coverage
-- Perbedaan besar antara kiri dan kanan = imbalance channel / balancing audio
-
-Persiapan pengujian:
-- Gunakan sound system dengan volume konstan
-- Hindari noise background saat pengukuran
-- Ulangi pengukuran beberapa kali untuk konsistensi data
+Skema interpretasi:
+- Level tinggi di pusat ruangan = distribusi suara cukup baik
+- Penurunan tajam di sudut = area yang kurang tercover
+- Selisih signifikan kiri-kanan = imbalance output speaker
 
 Lisensi:
-Proyek ini dibuat untuk kebutuhan eksperimen dan pengukuran suara sederhana.
+Proyek ini dibuat untuk kebutuhan eksperimen, pengukuran suara sederhana, dan evaluasi distribusi audio secara praktis.
