@@ -34,3 +34,14 @@ data class AudioStats(
     val totalMeasurements: Int = 0,
     val isRecording: Boolean = false
 )
+
+package com.audiospreadanalyzer.app.data.model
+
+data class MeasurementPoint(
+    val id: String = "",
+    val name: String = "",
+    val x: Float = 0f,
+    val y: Float = 0f,
+    val description: String = "",
+    val createdAt: Long = 0L
+)
