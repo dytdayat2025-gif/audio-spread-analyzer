@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Audio Spread Analyzer</string>
+    <string name="title_main">Audio Analyzer</string>
+    <string name="desc_sound_level">Level Suara</string>
+    <string name="btn_start_measuring">Mulai Pengukuran</string>
+    <string name="btn_stop_measuring">Hentikan Pengukuran</string>
+    <string name="btn_clear_data">Hapus Data</string>
+    <string name="btn_export_data">Ekspor Data</string>
+    <string name="label_current_level">Level Saat Ini</string>
+    <string name="label_average_level">Rata-rata Level</string>
+    <string name="label_max_level">Level Maksimum</string>
+    <string name="label_min_level">Level Minimum</string>
+    <string name="label_measurement_count">Total Pengukuran</string>
+    <string name="label_location">Lokasi/Posisi</string>
+    <string name="hint_enter_location">Masukkan lokasi pengukuran</string>
+    <string name="unit_db">dB</string>
+    <string name="error_no_microphone">Microphone tidak tersedia</string>
+    <string name="error_permission_denied">Izin microphone ditolak</string>
+    <string name="success_data_exported">Data berhasil diekspor</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="menu_about">Tentang</string>
+    <string name="menu_history">Riwayat</string>
+</resources>
